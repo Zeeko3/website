@@ -30,6 +30,7 @@ ul.yiiPager a:visited
 ul.yiiPager .page a
 {
 	font-weight:normal;
+	background-color: var(--secondry_block_bg);
 }
 
 ul.yiiPager a:hover
