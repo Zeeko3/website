@@ -33,6 +33,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="<?php echo $this->context->auto_version('/css/all.css'); ?>" media="screen" rel="stylesheet" type="text/css" />
+  <link href="<?php echo $this->context->auto_version('/css/donate.css'); ?>" media="screen" rel="stylesheet" type="text/css" />
   <?php if (strcmp($this->params['_pageType'], "search") == 0) { ?>
   <link href="<?php echo $this->context->auto_version('/css/pager.css'); ?>" media="screen" rel="stylesheet" type="text/css" />
   <?php } ?>
@@ -43,6 +44,7 @@
   <link rel="image_src" href="/images/hadith_icon2.png" />
   <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" />
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> 
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -80,9 +82,18 @@
 <body>
 <?php $this->beginBody() ?>
 <div id="fb-root"></div>
-	
+
 <div id="site">
 	<div id="header">
+	    <!-- Donation Header -->
+	    <?php if (!isset(Yii::$app->request->pathInfo) || Yii::$app->request->pathInfo !== 'donate'): ?>
+	    <div id="donation-header">
+		<div class="donation-header-content">
+		    <span>Contribute to our mission</span>
+		    <a href="/donate" class="donate-now-btn">Donate Now</a>
+		</div>
+	    </div>
+	    <?php endif; ?>
     	<div id="toolbar">
        		<div id="toolbarRight">
 				<?php echo $this->render('/layouts/suite') ?>
@@ -132,8 +143,9 @@
 	<div class="clear"></div>
 
 </div><!-- site div close -->
+
+
 <?php $this->endBody() ?>
 </body>
 </html>
 <?php $this->endPage() ?>
-

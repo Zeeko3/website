@@ -4,7 +4,8 @@
 	<a href="/news">News</a> |
 	<a href="/support">Support</a> |
 	<a href="/developers">Developers</a> |
-    <a href="/contact">Contact</a>
+    <a href="/contact">Contact</a> |
+	<a href="/donate">Donate</a>
 	<div class="sm_links">
 		<a href="https://www.facebook.com/Sunnahcom-104172848076350" target="_blank"><i class="icn-fb"></i></a>
 		<a href="https://www.instagram.com/_sunnahcom/" target="_blank"><i class="icn-ig"></i></a>
@@ -26,4 +27,3 @@ var sc_security="63a57073";
 <img class="statcounter" src="https://c.statcounter.com/7148282/0/63a57073/1/" alt="Web Analytics"></a>
 </div>
 </noscript>
-

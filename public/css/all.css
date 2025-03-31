@@ -470,7 +470,7 @@ textarea {
 	font-size: inherit;
 }
 .hcarousel_container {
-    background-color: rgba(250, 248, 244, 0.39);
+    background-color: var(--secondry_block_bg);;
     border-radius: 5px;
     height: 90%;
     margin-top: 5px;
@@ -490,7 +490,7 @@ textarea {
     opacity: 0;
     height: 20px;
     width: 20px;
-    background: #bbdada;
+    background: var(--link-color);
     line-height: 21px;
     border-radius: 15px;
     text-align: center;
@@ -507,20 +507,16 @@ textarea {
 	left: 5px;
 }
 .carousel_nav:hover {
-    background-color: #96c0c0
+    filter: brightness(80%);
 }
-/* Aniamted BG */
+
 .hcarousel_container:before {
     content: '';
     position: absolute;
     top: 20px;
     left: -200px;
-    border-bottom: 470px solid #ffffff96;
-    border-left: 470px solid transparent;
-    border-right: 170px solid transparent;
-    animation: 60s spin linear infinite;
-    filter: blur(30px)
 }
+
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 
 .footer {
@@ -651,14 +647,6 @@ input.searchquery{
     color:#84B8B8;
 }
 
-.searchtipslink {
-	float: right;
-	font-size: 12px;
-	padding-left: 10px;
-	padding-top: 8px;
-	cursor: pointer;
-}
-
 #search a {color: #fff;}
 #searchtips a { color: #5d8080; }
 
@@ -745,6 +733,7 @@ input.searchquery{
     padding-left: 10px;
     padding-top: 3px;
     border: 0px solid;
+    color:#75A1A1;
 }
 
 .collection_titles a {
@@ -1457,8 +1446,8 @@ input.searchquery{
 }
 
 .about {
-    width: 60%;
     padding-left: 10%;
+	padding-right: 10%;
     text-align: justify;
     padding-top: 10px;
     font-size: 16px;
@@ -1806,10 +1795,6 @@ input.searchquery{
         max-width: 410px;
         box-sizing: border-box;
         margin: 0 auto;
-        display: grid;
-        grid-area: auto;
-        grid-template-columns: 70px auto;
-        grid-gap: 10px;
         align-content: space-evenly;
         align-items: center;
 	}
@@ -1817,21 +1802,12 @@ input.searchquery{
         font-size: 16px;
         padding-right: 2.7em;
 	}
-    .searchtipslink {
-        position: initial;
-        float: none;
-        display: inline-block;
-        padding-top: 0;
-        vertical-align: middle;
-        padding-left: 0;
-	}
 
 	#indexsearchtips {
 		font-size: 16px;
 		height: 555px;
 	}
 	#searchtips {
-		left: 0;
 		top: 90px;
 		position: absolute;
 	}
